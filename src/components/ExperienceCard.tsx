@@ -6,6 +6,8 @@ interface ExperienceCardProps {
   description: string;
   logo?: string;
   responsibilities?: string[];
+  onClick?: () => void;
+  clickable?: boolean;
 }
 
 export const ExperienceCard: React.FC<ExperienceCardProps> = ({
@@ -15,10 +17,23 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
   duration,
   description,
   logo,
-  responsibilities
+  responsibilities,
+  onClick,
+  clickable = false
 }) => {
+  const handleClick = () => {
+    if (clickable && onClick) {
+      onClick();
+    }
+  };
+
   return (
-    <div className="card-elevated rounded-2xl p-8 space-y-6 group">
+    <div 
+      className={`card-elevated rounded-2xl p-8 space-y-6 group ${
+        clickable ? 'cursor-pointer hover:shadow-xl transition-all duration-300' : ''
+      }`}
+      onClick={handleClick}
+    >
       <div className="flex items-start gap-6">
         {/* Company Logo */}
         {logo && (

@@ -9,6 +9,8 @@ interface ProjectCardProps {
   teammates?: string[];
   githubUrl?: string;
   icon?: React.ReactNode;
+  onClick?: () => void;
+  clickable?: boolean;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -19,10 +21,23 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   teamSize,
   teammates,
   githubUrl,
-  icon
+  icon,
+  onClick,
+  clickable = false
 }) => {
+  const handleClick = () => {
+    if (clickable && onClick) {
+      onClick();
+    }
+  };
+
   return (
-    <div className="card-elevated rounded-2xl p-8 space-y-6 group h-full">
+    <div 
+      className={`card-elevated rounded-2xl p-8 space-y-6 group h-full ${
+        clickable ? 'cursor-pointer hover:shadow-xl transition-all duration-300' : ''
+      }`}
+      onClick={handleClick}
+    >
       <div className="flex items-start justify-between">
         <div className="flex items-start gap-4">
           {/* Project Icon */}

@@ -15,10 +15,18 @@
     --card-foreground: 215 25% 15%;
     --card-border: 220 13% 91%;
     
-    /* Interactive elements */
+    /* Enhanced interactive elements with vibrant colors */
     --primary: 217 91% 48%;
     --primary-foreground: 0 0% 98%;
     --primary-glow: 217 91% 65%;
+    --primary-vibrant: 200 100% 50%;
+    
+    /* Vibrant accent colors inspired by the images */
+    --accent-blue: 200 100% 50%;
+    --accent-green: 120 100% 40%;
+    --accent-yellow: 50 100% 50%;
+    --accent-purple: 280 100% 60%;
+    --accent-orange: 25 95% 53%;
     
     /* Secondary palette */
     --secondary: 215 20% 95%;
@@ -44,10 +52,12 @@
     --ring: 217 91% 48%;
     --radius: 0.75rem;
     
-    /* Professional gradients */
+    /* Enhanced gradients with vibrant colors */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-vibrant: linear-gradient(135deg, hsl(var(--accent-blue)), hsl(var(--accent-green)), hsl(var(--accent-yellow)));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 13% 98%));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(215 20% 97%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--accent-blue) / 0.1), hsl(var(--accent-purple) / 0.1));
     
     /* Shadow system for depth */
     --shadow-sm: 0 1px 2px 0 hsl(215 25% 15% / 0.05);

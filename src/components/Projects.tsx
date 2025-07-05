@@ -184,7 +184,7 @@ export const Projects = () => {
   };
 
   return (
-    <section className="py-20 px-6 bg-background">
+    <section id="projects" className="py-20 px-6 bg-background">
       <div className="container max-w-6xl mx-auto">
         <ScrollAnimation animation="fadeInUp">
           <div className="text-center mb-16">

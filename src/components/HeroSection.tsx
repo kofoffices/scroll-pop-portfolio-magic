@@ -3,7 +3,7 @@ import { ScrollAnimation } from './ScrollAnimation';
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-subtle">
+    <section id="home" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-subtle pt-20">
       <div className="container max-w-6xl">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
